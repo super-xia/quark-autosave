@@ -11,8 +11,8 @@ android {
         applicationId = "com.quarksave.app"
         minSdk = 26
         targetSdk = 34
-        versionCode = 3
-        versionName = "1.2"
+        versionCode = 4
+        versionName = "1.3.0"
     }
 
     buildTypes {
@@ -57,4 +57,12 @@ dependencies {
     implementation("androidx.compose.material3:material3")
 
     implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    // 扫码: CameraX + ZXing core (轻量, 不发胖)
+    implementation("androidx.camera:camera-core:1.3.1")
+    implementation("androidx.camera:camera-camera2:1.3.1")
+    implementation("androidx.camera:camera-lifecycle:1.3.1")
+    implementation("androidx.camera:camera-view:1.3.1")
+    implementation("com.google.zxing:core:3.5.2")
+    implementation("androidx.lifecycle:lifecycle-process:2.7.0")
 }

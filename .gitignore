@@ -17,3 +17,5 @@ ui/
 
 # Notes / local
 *.log
+# 测试版/临时产物
+*测试版*.apk
