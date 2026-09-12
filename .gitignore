@@ -1,0 +1,19 @@
+# Build outputs
+build/
+app/build/
+*.idsig
+
+# Gradle
+.gradle/
+local.properties
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+
+# UI rendering assets (large, node_modules etc.)
+ui/
+
+# Notes / local
+*.log

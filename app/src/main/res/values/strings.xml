@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">夸克自动转存</string>
+    <string name="hint_cookie">粘贴夸克账号 Cookie（登录 pan.quark.cn 后 F12 复制）</string>
+    <string name="btn_login">登录 / 切换账号</string>
+    <string name="savepath_hint">/自动转存（留空=根目录）</string>
+</resources>
