@@ -13,7 +13,7 @@ local.properties
 .DS_Store
 
 # UI rendering assets (large, node_modules etc.)
-ui/
+/ui/
 
 # Notes / local
 *.log
