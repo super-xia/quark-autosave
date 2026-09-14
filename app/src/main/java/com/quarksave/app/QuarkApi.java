@@ -169,9 +169,10 @@ public class QuarkApi {
         JSONArray merged = new JSONArray();
         int page = 1;
         JSONObject resp = null;
+        String encStoken = urlenc(stoken);
         while (true) {
             String url = BASE_URL + "/1/clouddrive/share/sharepage/detail?pr=ucpro&fr=pc&pwd_id="
-                    + pwd_id + "&stoken=" + stoken + "&pdir_fid=" + pdir_fid + "&force=0"
+                    + pwd_id + "&stoken=" + encStoken + "&pdir_fid=" + pdir_fid + "&force=0"
                     + "&_page=" + page + "&_size=50&_fetch_banner=0&_fetch_share=0&_fetch_total=1"
                     + "&_sort=" + urlenc("file_type:asc,updated_at:desc") + "&ver=2&fetch_share_full_path=0";
             resp = req("GET", url, null);
@@ -251,6 +252,7 @@ public class QuarkApi {
         p.put("fid_token_list", fidTokenList);
         p.put("to_pdir_fid", toFid);
         p.put("pwd_id", pwdId);
+        // stoken 按原仓库此处不手动 urlencode，交给 req 统一处理；保持一致但确保含+/%的 token 不被截断
         p.put("stoken", stoken);
         p.put("pdir_fid", "0");
         p.put("scene", "link");
